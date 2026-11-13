@@ -81,3 +81,8 @@ Development
 ***Markdown Editor*** is written in [typescript](https://www.typescriptlang.org/). It requires [nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) to build.
 
 For development you can automatically build the project every time the source changes by running `make watch`.
+
+## Commercial Support & Custom Integration
+
+Need custom features, enterprise integration, or priority support?
+Maintained by **[Eclipse Technology](https://eclipse-technology.eu)** ([contact@eclipse-technology.eu](mailto:contact@eclipse-technology.eu)).
