@@ -27,7 +27,5 @@ jobs:
           extensions: redis
       - name: Install dependencies
         run: composer install --no-interaction
-      - name: Install nextcloud/ocp
-        run: composer require --dev nextcloud/ocp:${{ matrix.ocp-version }} --no-interaction
       - name: Run coding standards check
         run: composer run psalm
