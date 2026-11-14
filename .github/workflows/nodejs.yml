@@ -10,21 +10,20 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [12.x, 15.x]
+        node-version: ['20.x']
 
     steps:
-    - uses: actions/checkout@v1
-    - uses: c-hive/gha-npm-cache@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install
-      run: npm ci
-    - name: npm build
-      run: npm run build
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: npm install
+        run: npm ci --ignore-scripts
+      - name: npm build
+        run: npm run build
